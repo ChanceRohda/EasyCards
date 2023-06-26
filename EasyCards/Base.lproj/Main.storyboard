@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EasyCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-Iu-KUu">
+                                <rect key="frame" x="0.0" y="165" width="393" height="578"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="setCell" rowHeight="149" id="asj-tV-Wta">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="149"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="asj-tV-Wta" id="Hqc-qW-wqI">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtY-n7-deD">
+                                                    <rect key="frame" x="243" y="5" width="150" height="67"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="67" id="9LQ-t5-dsR"/>
+                                                        <constraint firstAttribute="width" constant="150" id="vfq-j2-y9E"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Edit">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="24" name="Palatino-Roman"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapEditButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XHd-3i-tGL"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="143-NN-EVO">
+                                                    <rect key="frame" x="243" y="77" width="150" height="67"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="67" id="VXp-CQ-yAM"/>
+                                                        <constraint firstAttribute="width" constant="150" id="b5l-aq-uQj"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <imageReference key="image" image="play.fill" catalog="system" symbolScale="default"/>
+                                                    </state>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Select">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="24" name="Palatino-Roman"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapSelectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgV-OX-Ul6"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBk-yL-Rap">
+                                                    <rect key="frame" x="20" y="11" width="193" height="127"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Set Name">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="Palatino-Roman"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mBk-yL-Rap" firstAttribute="leading" secondItem="Hqc-qW-wqI" secondAttribute="leadingMargin" id="16U-7B-eKP"/>
+                                                <constraint firstItem="mBk-yL-Rap" firstAttribute="top" secondItem="Hqc-qW-wqI" secondAttribute="topMargin" id="1HL-0a-OSP"/>
+                                                <constraint firstItem="mBk-yL-Rap" firstAttribute="bottom" secondItem="Hqc-qW-wqI" secondAttribute="bottomMargin" id="2QH-Yf-vC1"/>
+                                                <constraint firstItem="143-NN-EVO" firstAttribute="top" secondItem="KtY-n7-deD" secondAttribute="bottom" constant="5" id="62u-A6-ylE"/>
+                                                <constraint firstItem="143-NN-EVO" firstAttribute="top" secondItem="KtY-n7-deD" secondAttribute="bottom" constant="5" id="CaP-AW-wFd"/>
+                                                <constraint firstAttribute="trailing" secondItem="143-NN-EVO" secondAttribute="trailing" id="FXH-c3-LAF"/>
+                                                <constraint firstItem="KtY-n7-deD" firstAttribute="top" secondItem="Hqc-qW-wqI" secondAttribute="top" constant="5" id="MPZ-Q7-Eer"/>
+                                                <constraint firstAttribute="trailing" secondItem="KtY-n7-deD" secondAttribute="trailing" id="ene-5B-cuc"/>
+                                                <constraint firstItem="KtY-n7-deD" firstAttribute="leading" secondItem="mBk-yL-Rap" secondAttribute="trailing" constant="30" id="wx7-wp-f2W"/>
+                                                <constraint firstAttribute="bottom" secondItem="143-NN-EVO" secondAttribute="bottom" constant="5" id="yFL-QC-ZuZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UEU-Iu-KUu" secondAttribute="trailing" id="6Hu-G0-8T4"/>
+                            <constraint firstItem="UEU-Iu-KUu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MCH-AF-vhZ"/>
+                            <constraint firstItem="UEU-Iu-KUu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="TCp-vQ-smu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UEU-Iu-KUu" secondAttribute="bottom" constant="75" id="d7S-q1-da7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="setListTableView" destination="UEU-Iu-KUu" id="kXk-CM-WXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
